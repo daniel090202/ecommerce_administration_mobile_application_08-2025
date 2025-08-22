@@ -1,0 +1,30 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "e-commerce-43992",
+          "appId": "1:15980756028:android:fe80f6c558a395157b1739",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "e-commerce-43992",
+          "appId": "1:15980756028:ios:8944677f5587946c7b1739",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "e-commerce-43992",
+          "configurations": {
+            "android": "1:15980756028:android:fe80f6c558a395157b1739",
+            "ios": "1:15980756028:ios:8944677f5587946c7b1739"
+          }
+        }
+      }
+    }
+  }
+}
