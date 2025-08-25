@@ -23,8 +23,6 @@ class AuthService {
 
       return "You successfully logged in";
     } on FirebaseAuthException catch (error) {
-      print(error.message.toString());
-
       return error.message.toString();
     }
   }
@@ -33,8 +31,14 @@ class AuthService {
     await FirebaseAuth.instance.signOut();
   }
 
-  Future<void> resetPassword(String email) async {
-    await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+  Future<String> resetPassword(String email) async {
+    try {
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+
+      return "Password reset link has been sent to your email";
+    } on FirebaseAuthException catch (error) {
+      return error.message.toString();
+    }
   }
 
   Future<bool> isLoggedIn() async {
